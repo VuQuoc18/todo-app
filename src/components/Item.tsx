@@ -6,18 +6,21 @@ import styled from '@emotion/styled';
 export const ItemStyled = styled.div<{ completed: boolean, isEditing: boolean }>`
   position: relative;
   text-decoration: ${(props) => (props.completed ? 'line-through' : 'none')};
-  color: ${(props) => (props.completed ? 'gray' : '#000')};
+  color: ${(props) => (props.completed ? 'gray' : '#fff')};
   padding: 15px 15px 15px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+  margin-bottom: 24px;
 
-  border: 1px solid ${(props) => (props.isEditing ? '#b83f45' : 'none')};
-  box-shadow: ${(props) => (props.isEditing ? '0 0 2px 2px #cf7d7d' : 'none')};
+  border: 2px solid ${(props) => (props.isEditing ? '#e6e6e6' : '#6015d0')};
+  box-shadow: ${(props) => (props.isEditing ? '0 0 2px 2px #e6e6e6' : 'none')};
 
-  &:not(:nth-of-type(1)) {
-    border-top: 1px solid ${(props) => (props.isEditing ? '#b83f45' : '#e6e6e6')};
+  &:hover {
+    background: #200648;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   .item {
@@ -96,11 +99,14 @@ export const ItemStyled = styled.div<{ completed: boolean, isEditing: boolean }>
 
     &__edit {
       width: 100%;
+
       input {
         font-size: 20px;
         padding: 7px 0;
         border: none;
         width: 100%;
+        background: #200648;
+        color: #fff;
 
         &:focus {
           outline: none;
@@ -108,9 +114,11 @@ export const ItemStyled = styled.div<{ completed: boolean, isEditing: boolean }>
       }
     }
 
-    &:hover .item__text {
-      .item__btn__remove {
-        display: flex;
+    &:hover {
+      .item__text {
+        .item__btn__remove {
+          display: flex;
+        }
       }
     }
   }

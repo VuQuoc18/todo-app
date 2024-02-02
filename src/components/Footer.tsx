@@ -10,14 +10,15 @@ interface FooterProps {
 
 export const FooterStyled = styled.div`
   display: flex;
-  background: #fff;
+  background: #120722;
   justify-content: space-between;
   border-top: 1px solid #e6e6e6;
   font-size: 15px;
   height: 20px;
-  padding: 10px 15px;
-  color: #000;
+  padding: 24px 15px;
+  color: #fff;
   position: relative;
+  font-weight: bold;
 
   .link {
     position: relative;
@@ -26,17 +27,6 @@ export const FooterStyled = styled.div`
       text-decoration: underline;
       cursor: pointer;
     }
-  }
-
-  &::before {
-    bottom: 0;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0,0,0,.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0,0,0,.2);
-    content: "";
-    height: 50px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
   }
 `;
 
@@ -54,13 +44,14 @@ export const FilterStyled = styled.div`
       list-style: none;
       padding: 0 5px;
       a {
-        font-weight: normal;
-        color: #000;
+        color: #fff;
+        font-weight: bold;
       }
 
       &.active {
-        border: 1px solid #ce4646;
+        border: 1px solid #b486f8;
         border-radius: 3px;
+        color: #b486f8;
       }
     }
   }

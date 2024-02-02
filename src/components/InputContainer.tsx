@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { Todo } from '../schemas/TodoSchema';
 import styled from '@emotion/styled';
 
 export const InputContainerStyled = styled.div`
-  background: #fff;
   position: relative;
   display: flex;
   width: 100%;
+  margin-bottom: 24px;
 
   input {
     font-size: 24px;
@@ -16,7 +16,9 @@ export const InputContainerStyled = styled.div`
     border: none;
     box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
     width: 100%;
-
+    background: #120722;
+    color: #ccc;
+    border: 1px solid #ccc;
     ::-ms-input-placeholder {
       font-style: italic;
     }
@@ -26,8 +28,8 @@ export const InputContainerStyled = styled.div`
     }
 
     &:focus {
-      outline: 1px solid #b83f45;
-      box-shadow: 0 0 2px 2px #cf7d7d;
+      outline: 1px solid #200648;
+      box-shadow: 0 0 2px 2px #160122;
     }
   }
 
@@ -62,14 +64,14 @@ const InputContainer: React.FC<InputContainerProps> = ({ todos, newTodo, setTodo
   return (
     <InputContainerStyled>
         { todos.length > 0 &&<div className="icon" onClick={handleToggleAll}>
-          <AiFillCaretDown size={25} color={ isAllCompleted ? '#000' : '#ccc'}/>
+          <AiFillCaretDown size={25} color={ isAllCompleted ? '#b486f8' : '#fff'}/>
         </div> }
       <input
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="What needs to be done?"
+        placeholder="Add a task ..."
       />
     </InputContainerStyled>
   );

@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const ListItemsStyled = styled.div`
-  background: #fff;
+  background: #120722;
   text-align: left;
 `;
 

@@ -10,13 +10,13 @@ import { useLocalStorageTodos } from './hooks/useLocalStorageTodos';
 
 export const AppWrapper = styled.div`
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
-    background: #fff;
+    background: #120722;
 `;
 
 export const H1 = styled.h1`
   font-size: 80px;
-  color: #b83f45;
   font-weight: 400;
+  text-transform: uppercase;
 `
 
 function App() {
